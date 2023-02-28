@@ -9,6 +9,7 @@ public class Main {
     public static void main(String[] args) {
         menu();
         menu();
+        menu();
     }
 
      private static void menu(){

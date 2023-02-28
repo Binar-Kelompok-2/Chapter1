@@ -16,12 +16,14 @@ public class Main {
          System.out.println("-------------------------------------");
          System.out.println("Menu");
          System.out.println("1. Hitung Luas Bidang");
-         System.out.println("2. Keluar");
+         System.out.println("2. Hitung Volume Bidang");
+         System.out.println("0. Keluar");
          System.out.println("-------------------------------------");
         int pilihan = input.nextInt();
          switch (pilihan) {
              case 1 -> PilihBidangLuas();
-             case 2 -> System.out.println("Terimakasih");
+             case 2 -> PilihBidangVolume();
+             case 0 -> System.out.println("Terimakasih");
              default -> {
                  System.out.println("Pilihan Salah");
                  menu();
@@ -86,5 +88,15 @@ public class Main {
             System.out.print("Inputan Salah");
             PilihBidangLuas();
         }
+    }
+    private static void PilihBidangVolume(){
+        System.out.println("-------------------------------------");
+        System.out.println("PILIH BIDANG YANG AKAN DIHITUNG");
+        System.out.println("-------------------------------------");
+        System.out.println("1. Kubus");
+        System.out.println("2. Balok");
+        System.out.println("3. Tabung");
+        System.out.println("0. Kembali Ke Menu Utama");
+        System.out.println("-------------------------------------");
     }
 }

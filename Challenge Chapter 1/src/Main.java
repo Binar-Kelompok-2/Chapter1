@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class Main {
     static Scanner input =new Scanner(System.in);
     static String random;
-    static int s, t, a, hasil_int, pilih_bidang;
-    static int pilih_bidang_volume, volume_kubus;
+    static int p, l, s, t, a, hasil_int, pilih_bidang;
+
     static double phi, setengah, j, hasil_double;
 
     public static void main(String[] args) {
@@ -17,7 +17,8 @@ public class Main {
          System.out.println("-------------------------------------");
          System.out.println("Menu");
          System.out.println("1. Hitung Luas Bidang");
-         System.out.println("2. Hitung Volume Bidang");
+
+         System.out.println("2. Hitung Luas Volume");
          System.out.println("0. Keluar");
          System.out.println("-------------------------------------");
         int pilihan = input.nextInt();
@@ -39,7 +40,7 @@ public class Main {
         System.out.println("2. Lingkaran");
         System.out.println("3. Segitiga");
         System.out.println("4. Persegi Panjang");
-        System.out.println("5. Kembali Ke Menu Utama");
+        System.out.println("0. Kembali Ke Menu Utama");
         System.out.println("-------------------------------------");
         pilih_bidang = input.nextInt();
         if(pilih_bidang == 1){
@@ -75,7 +76,7 @@ public class Main {
             System.out.println("-------------------------------------");
             System.out.print("Masukan Alas Segitiga : ");
             a = input.nextInt();
-            System.out.print("Masukan Tinggi Segitu=iga : ");
+            System.out.print("Masukan Tinggi Segitiga : ");
             t = input.nextInt();
             setengah = 0.5;
             hasil_double = a*t*setengah;
@@ -85,11 +86,30 @@ public class Main {
             random = input.next();
             menu();
         }
+        else if(pilih_bidang == 4){
+            System.out.println("-------------------------------------");
+            System.out.println("Anda Memilih Persegi Panjang");
+            System.out.println("-------------------------------------");
+            System.out.print("Masukan Panjang : ");
+            p = input.nextInt();
+            System.out.print("Masukan Lebar : ");
+            l = input.nextInt();
+            hasil_double = p*l;
+            System.out.println("\nProcessing...");
+            System.out.println(hasil_double);
+            System.out.println("Tekan apa saja untuk kembali ke menu utama");
+            random = input.next();
+            menu();
+        } 
+        else if(pilih_bidang == 0){
+            menu();
+        } 
         else{
             System.out.print("Inputan Salah");
             PilihBidangLuas();
         }
     }
+
     private static void PilihBidangVolume(){
         System.out.println("-------------------------------------");
         System.out.println("PILIH BIDANG YANG AKAN DIHITUNG");

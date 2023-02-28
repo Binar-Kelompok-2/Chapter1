@@ -81,6 +81,7 @@ public class Main {
             System.out.println("Tekan apa saja untuk kembali ke menu utama");
             random = input.next();
             menu();
+            System.out.println("Dwiputra");
         }
         else{
             System.out.print("Inputan Salah");

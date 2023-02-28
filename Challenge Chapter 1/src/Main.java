@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+//diva code
 public class Main {
     static Scanner input =new Scanner(System.in);
     static String random;

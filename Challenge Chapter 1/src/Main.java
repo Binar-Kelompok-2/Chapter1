@@ -16,6 +16,7 @@ public class Main {
          System.out.println("-------------------------------------");
          System.out.println("Menu");
          System.out.println("1. Hitung Luas Bidang");
+         System.out.println("2. Hitung Luas Volume");
          System.out.println("0. Keluar");
          System.out.println("-------------------------------------");
         int pilihan = input.nextInt();

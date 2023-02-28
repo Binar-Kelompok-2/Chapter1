@@ -4,6 +4,7 @@ public class Main {
     static Scanner input =new Scanner(System.in);
     static String random;
     static int p, l, s, t, a, hasil_int, pilih_bidang;
+
     static double phi, setengah, j, hasil_double;
 
     public static void main(String[] args) {
@@ -16,6 +17,7 @@ public class Main {
          System.out.println("-------------------------------------");
          System.out.println("Menu");
          System.out.println("1. Hitung Luas Bidang");
+
          System.out.println("2. Hitung Luas Volume");
          System.out.println("0. Keluar");
          System.out.println("-------------------------------------");
@@ -107,7 +109,7 @@ public class Main {
             PilihBidangLuas();
         }
     }
-    
+
     private static void PilihBidangVolume(){
         System.out.println("-------------------------------------");
         System.out.println("PILIH BIDANG YANG AKAN DIHITUNG");
@@ -117,7 +119,19 @@ public class Main {
         System.out.println("3. Tabung");
         System.out.println("0. Kembali Ke Menu Utama");
         System.out.println("-------------------------------------");
-        pilih_bidang = input.nextInt();
-        
+        pilih_bidang_volume = input.nextInt();
+        if(pilih_bidang_volume == 1){
+            System.out.println("-------------------------------------");
+            System.out.println("Anda Memilih Kubus");
+            System.out.println("-------------------------------------");
+            System.out.print("Masukan Sisi Kubus : ");
+            s = input.nextInt();
+            volume_kubus = s*s*s;
+            System.out.println("\nProcessing...");
+            System.out.println(volume_kubus);
+            System.out.println("Tekan apa untuk kembali ke menu utama");
+            random = input.next();
+            menu();
+        }
     }
 }

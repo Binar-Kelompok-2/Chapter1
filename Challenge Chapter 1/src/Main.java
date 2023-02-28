@@ -82,30 +82,33 @@ public class Main {
             System.out.println("Tekan apa saja untuk kembali ke menu utama");
             random = input.next();
             menu();
-        } else if(pilih_bidang == 4){
+        }
+        else if(pilih_bidang == 4){
             System.out.println("-------------------------------------");
             System.out.println("Anda Memilih Persegi Panjang");
             System.out.println("-------------------------------------");
             System.out.print("Masukan Panjang : ");
-            a = input.nextInt();
+            p = input.nextInt();
             System.out.print("Masukan Lebar : ");
-            t = input.nextInt();
+            l = input.nextInt();
             hasil_double = p*l;
             System.out.println("\nProcessing...");
             System.out.println(hasil_double);
             System.out.println("Tekan apa saja untuk kembali ke menu utama");
             random = input.next();
             menu();
-        } else if(pilih_bidang == 0){
+        } 
+        else if(pilih_bidang == 0){
             menu();
-        } else{
+        } 
+        else{
             System.out.print("Inputan Salah");
             PilihBidangLuas();
         }
     }
     
     private static void PilihBidangVolume(){
-         System.out.println("-------------------------------------");
+        System.out.println("-------------------------------------");
         System.out.println("PILIH BIDANG YANG AKAN DIHITUNG");
         System.out.println("-------------------------------------");
         System.out.println("1. Kubus");
@@ -114,5 +117,6 @@ public class Main {
         System.out.println("0. Kembali Ke Menu Utama");
         System.out.println("-------------------------------------");
         pilih_bidang = input.nextInt();
+        
     }
 }

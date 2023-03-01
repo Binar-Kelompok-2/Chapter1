@@ -23,7 +23,7 @@ public class Main {
         switch (pilihan) {
             case 1 -> PilihBidangLuas();
             case 2 -> PilihBidangVolume(); //lamda digunakan agar otomatis break
-            case 0 -> System.out.println("Terimakasih"); break;
+            case 0 -> System.out.println("Terimakasih");
 
             default -> {
                 System.out.println("Pilihan Salah");

@@ -23,13 +23,15 @@ public class Main {
         switch (pilihan) {
             case 1 -> PilihBidangLuas();
             case 2 -> PilihBidangVolume();
-            case 0 -> System.out.println("Terimakasih");
+            case 0 -> System.out.println("Terimakasih"); break;
+
             default -> {
                 System.out.println("Pilihan Salah");
                 menu();
             }
         }
     }
+    
     private static void PilihBidangLuas(){
         System.out.println("-------------------------------------");
         System.out.println("PILIH BIDANG YANG AKAN DIHITUNG");
@@ -41,7 +43,7 @@ public class Main {
         System.out.println("0. Kembali Ke Menu Utama");
         System.out.println("-------------------------------------");
         pilih_bidang = input.nextInt();
-        if(pilih_bidang == 1){
+        if(pilih_bidang == 1) {
             System.out.println("-------------------------------------");
             System.out.println("Anda Memilih Persegi");
             System.out.println("-------------------------------------");
@@ -49,12 +51,15 @@ public class Main {
             s = input.nextInt();
             hasil_int = s*s;
             System.out.println("\nProcessing...");
-            System.out.println(hasil_int);
+            System.out.println("Luas dari persegi adalah " + hasil_int);
             System.out.println("Tekan apa untuk kembali ke menu utama");
-            random = input.next();
+            try {
+                System.in.read();
+            }catch (Exception e){
+                System.out.print("");
+            }
             menu();
-        }
-        else if(pilih_bidang == 2){
+        } else if(pilih_bidang == 2) {
             System.out.println("-------------------------------------");
             System.out.println("Anda Memilih Lingkaran");
             System.out.println("-------------------------------------");
@@ -63,12 +68,15 @@ public class Main {
             phi = 3.14;
             hasil_double = j*phi;
             System.out.println("\nProcessing...");
-            System.out.println(hasil_double);
+            System.out.println("Luas dari lingkaran adalah " + hasil_double);
             System.out.println("Tekan apa saja untuk kembali ke menu utama");
-            random = input.next();
+            try {
+                System.in.read();
+            }catch (Exception e){
+                System.out.print("");
+            }
             menu();
-        }
-        else if(pilih_bidang == 3){
+        } else if(pilih_bidang == 3) {
             System.out.println("-------------------------------------");
             System.out.println("Anda Memilih Segitiga");
             System.out.println("-------------------------------------");
@@ -79,12 +87,15 @@ public class Main {
             setengah = 0.5;
             hasil_double = a*t*setengah;
             System.out.println("\nProcessing...");
-            System.out.println(hasil_double);
+            System.out.println("Luas dari segitiga adalah " + hasil_double);
             System.out.println("Tekan apa saja untuk kembali ke menu utama");
-            random = input.next();
+            try {
+                System.in.read();
+            }catch (Exception e){
+                System.out.print("");
+            }
             menu();
-        }
-        else if(pilih_bidang == 4){
+        } else if(pilih_bidang == 4) {
             System.out.println("-------------------------------------");
             System.out.println("Anda Memilih Persegi Panjang");
             System.out.println("-------------------------------------");
@@ -95,19 +106,23 @@ public class Main {
             l = input.nextInt();
             hasil_double = p*l;
             System.out.println("\nProcessing...");
-            System.out.println(hasil_double);
+            System.out.println("Luas dari persegi panjang adalah " + hasil_double);
             System.out.println("Tekan apa saja untuk kembali ke menu utama");
-            random = input.next();
+            try {
+                System.in.read();
+            }catch (Exception e){
+                System.out.print("");
+            }
             menu();
-        }
-        else if(pilih_bidang == 0){
+
+        } else if(pilih_bidang == 0) {
             menu();
-        }
-        else{
+        } else {
             System.out.print("Inputan Salah");
             PilihBidangLuas();
         }
     }
+
     private static void PilihBidangVolume() {
         System.out.println("-------------------------------------");
         System.out.println("PILIH BIDANG YANG AKAN DIHITUNG");
@@ -126,11 +141,16 @@ public class Main {
             s = input.nextInt();
             hasil_int = s * s * s;
             System.out.println("\nProcessing...");
-            System.out.println("Volume dari kubus adalah" + hasil_int);
+            System.out.println("Volume dari kubus adalah " + hasil_int);
             System.out.println(" ");
             System.out.println("-------------------------------------");
             System.out.println("Tekan apa saja untuk kembali ke menu utama");
-            random = input.next();
+            try {
+                System.in.read();
+            }catch (Exception e){
+                System.out.print("");
+            }
+
             menu();
         } else if (pilih_bidang == 2) {
             System.out.println("-------------------------------------");
@@ -144,11 +164,15 @@ public class Main {
             t = input.nextInt();
             hasil_int = p * l * t;
             System.out.println("\nProcessing...");
-            System.out.println(hasil_int);
+            System.out.println("Volume dari balok adalah " + hasil_int);
             System.out.println(" ");
             System.out.println("-------------------------------------");
             System.out.println("Tekan apa saja untuk kembali ke menu utama");
-            random = input.next();
+            try {
+                System.in.read();
+            }catch (Exception e){
+                System.out.print("");
+            }
             menu();
         } else if (pilih_bidang == 3) {
             System.out.println("-------------------------------------");
@@ -161,9 +185,13 @@ public class Main {
             phi = 3.14;
             hasil_double = j * t * phi;
             System.out.println("\nProcessing...");
-            System.out.println(hasil_double);
+            System.out.println("Volume dari tabung adalah " + hasil_double);
             System.out.println("Tekan apa saja untuk kembali ke menu utama");
-            random = input.next();
+            try {
+                System.in.read();
+            }catch (Exception e){
+                System.out.print("");
+            }
             menu();
         } else if (pilih_bidang == 0) {
             menu();

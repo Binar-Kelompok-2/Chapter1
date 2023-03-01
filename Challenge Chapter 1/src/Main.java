@@ -115,7 +115,6 @@ public class Main {
         System.out.println("1. Kubus");
         System.out.println("2. Balok");
         System.out.println("3. Tabung");
-
         System.out.println("0. Kembali Ke Menu Utama");
         System.out.println("-------------------------------------");
         pilih_bidang = input.nextInt();
@@ -166,7 +165,7 @@ public class Main {
             System.out.println("Tekan apa saja untuk kembali ke menu utama");
             random = input.next();
             menu();
-        } else if (pilih_bidang == 4) {
+        } else if (pilih_bidang == 0) {
             menu();
         } else {
             System.out.print("Inputan Salah");

@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class Main {
     static Scanner input = new Scanner(System.in);
-    static String random;
     static int p, l, s, t, a, hasil_int, pilih_bidang;
     static double phi, setengah, j, hasil_double;
     

@@ -1,37 +1,35 @@
 import java.util.Scanner;
 
 public class Main {
-    static Scanner input =new Scanner(System.in);
+    static Scanner input = new Scanner(System.in);
     static String random;
     static int p, l, s, t, a, hasil_int, pilih_bidang;
-
     static double phi, setengah, j, hasil_double;
-
+    
     public static void main(String[] args) {
         menu();
     }
 
-     private static void menu(){
-         System.out.println("-------------------------------------");
-         System.out.println("KALKULATOR PENGHITUNG LUAS DAN VOLUME");
-         System.out.println("-------------------------------------");
-         System.out.println("Menu");
-         System.out.println("1. Hitung Luas Bidang");
-
-         System.out.println("2. Hitung Luas Volume");
-         System.out.println("0. Keluar");
-         System.out.println("-------------------------------------");
+    private static void menu() {
+        System.out.println("-------------------------------------");
+        System.out.println("KALKULATOR PENGHITUNG LUAS DAN VOLUME");
+        System.out.println("-------------------------------------");
+        System.out.println("Menu");
+        System.out.println("1. Hitung Luas Bidang");
+        System.out.println("2. Hitung Luas Volume");
+        System.out.println("0. Keluar");
+        System.out.println("-------------------------------------");
         int pilihan = input.nextInt();
-         switch (pilihan) {
-
-             case 1 -> PilihBidangLuas();
-             case 2 -> PilihBidangVolume();
-             case 0 -> System.out.println("Terimakasih");
-             default -> {
-                 System.out.println("Pilihan Salah");
-                 menu();
-             }
-         }
+        switch (pilihan) {
+            case 1 -> PilihBidangLuas();
+            case 2 -> PilihBidangVolume();
+            case 0 -> System.out.println("Terimakasih");
+            default -> {
+                System.out.println("Pilihan Salah");
+                menu();
+            }
+        }
+    }
     private static void PilihBidangLuas(){
         System.out.println("-------------------------------------");
         System.out.println("PILIH BIDANG YANG AKAN DIHITUNG");
@@ -101,17 +99,16 @@ public class Main {
             System.out.println("Tekan apa saja untuk kembali ke menu utama");
             random = input.next();
             menu();
-        } 
+        }
         else if(pilih_bidang == 0){
             menu();
-        } 
+        }
         else{
             System.out.print("Inputan Salah");
             PilihBidangLuas();
         }
     }
-
-    private static void PilihBidangVolume(){
+    private static void PilihBidangVolume() {
         System.out.println("-------------------------------------");
         System.out.println("PILIH BIDANG YANG AKAN DIHITUNG");
         System.out.println("-------------------------------------");
@@ -121,23 +118,22 @@ public class Main {
 
         System.out.println("0. Kembali Ke Menu Utama");
         System.out.println("-------------------------------------");
-        pilih_bidang_volume = input.nextInt();
-        if(pilih_bidang_volume == 1){
+        pilih_bidang = input.nextInt();
+        if (pilih_bidang == 1) {
             System.out.println("-------------------------------------");
             System.out.println("Anda Memilih Kubus");
             System.out.println("-------------------------------------");
             System.out.print("Masukan Sisi Kubus : ");
             s = input.nextInt();
-            hasil_int = s*s*s;
+            hasil_int = s * s * s;
             System.out.println("\nProcessing...");
-            System.out.println("Volume dari kubus adalah" hasil_int);
-                        System.out.println(" ");
-                        System.out.println("-------------------------------------");
+            System.out.println("Volume dari kubus adalah" + hasil_int);
+            System.out.println(" ");
+            System.out.println("-------------------------------------");
             System.out.println("Tekan apa saja untuk kembali ke menu utama");
             random = input.next();
             menu();
-        }
-        else if(pilih_bidang == 2){
+        } else if (pilih_bidang == 2) {
             System.out.println("-------------------------------------");
             System.out.println("Anda Memilih Balok");
             System.out.println("-------------------------------------");
@@ -147,16 +143,15 @@ public class Main {
             l = input.nextInt();
             System.out.print("Masukan Tinggi Balok : ");
             t = input.nextInt();
-            hasil_int = p*l*t;
+            hasil_int = p * l * t;
             System.out.println("\nProcessing...");
             System.out.println(hasil_int);
-                        System.out.println(" ");
-                        System.out.println("-------------------------------------");
+            System.out.println(" ");
+            System.out.println("-------------------------------------");
             System.out.println("Tekan apa saja untuk kembali ke menu utama");
             random = input.next();
             menu();
-        }
-        else if(pilih_bidang == 3){
+        } else if (pilih_bidang == 3) {
             System.out.println("-------------------------------------");
             System.out.println("Anda Memilih Tabung");
             System.out.println("-------------------------------------");
@@ -165,18 +160,17 @@ public class Main {
             System.out.print("Masukan Tinggi Tabung: ");
             t = input.nextInt();
             phi = 3.14;
-            hasil_double = j*t*phi;
+            hasil_double = j * t * phi;
             System.out.println("\nProcessing...");
             System.out.println(hasil_double);
             System.out.println("Tekan apa saja untuk kembali ke menu utama");
             random = input.next();
             menu();
-        }
-        else if(pilih_bidang == 4){
+        } else if (pilih_bidang == 4) {
             menu();
-        }
-        else{
+        } else {
             System.out.print("Inputan Salah");
             PilihBidangVolume();
         }
     }
+}

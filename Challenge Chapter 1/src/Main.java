@@ -24,6 +24,7 @@ public class Main {
             case 1 -> PilihBidangLuas();
             case 2 -> PilihBidangVolume();
             case 0 -> System.out.println("Terimakasih"); break;
+
             default -> {
                 System.out.println("Pilihan Salah");
                 menu();
@@ -113,6 +114,7 @@ public class Main {
                 System.out.print("");
             }
             menu();
+
         } else if(pilih_bidang == 0) {
             menu();
         } else {
@@ -120,7 +122,7 @@ public class Main {
             PilihBidangLuas();
         }
     }
-    
+
     private static void PilihBidangVolume() {
         System.out.println("-------------------------------------");
         System.out.println("PILIH BIDANG YANG AKAN DIHITUNG");
@@ -148,6 +150,7 @@ public class Main {
             }catch (Exception e){
                 System.out.print("");
             }
+
             menu();
         } else if (pilih_bidang == 2) {
             System.out.println("-------------------------------------");

@@ -24,10 +24,10 @@ public class Main {
         int pilihan = input.nextInt();
          switch (pilihan) {
 
-             case 1 -> PilihBidangLuas();
-             case 2 -> PilihBidangVolume();
-             case 0 -> System.out.println("Terimakasih");
-             default -> {
+             case 1 : PilihBidangLuas();
+             case 2 : PilihBidangVolume();
+             case 0 : System.out.println("Terimakasih");
+             default :
                  System.out.println("Pilihan Salah");
                  menu();
              }
@@ -135,7 +135,8 @@ public class Main {
                         System.out.println("-------------------------------------");
             System.out.println("Tekan apa saja untuk kembali ke menu utama");
             random = input.next();
-            menu();
+            //menu();
+                        //System.exit(0);
         }
         else if(pilih_bidang == 2){
             System.out.println("-------------------------------------");
@@ -172,7 +173,7 @@ public class Main {
             random = input.next();
             menu();
         }
-        else if(pilih_bidang == 4){
+        else if(pilih_bidang == 0){
             menu();
         }
         else{

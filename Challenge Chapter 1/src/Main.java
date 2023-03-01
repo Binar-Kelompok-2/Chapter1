@@ -22,7 +22,7 @@ public class Main {
         int pilihan = input.nextInt();
         switch (pilihan) {
             case 1 -> PilihBidangLuas();
-            case 2 -> PilihBidangVolume();
+            case 2 -> PilihBidangVolume(); //lamda digunakan agar otomatis break
             case 0 -> System.out.println("Terimakasih"); break;
 
             default -> {
